@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "serviceFor_disabled";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> الرئيسية</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/serviceFor_disabledSS.css">
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="bannerCont">
+        <img src="~/Imgs/disabled Img.jpg" alt="evoting" class="disabledImg">
+    </div>
+    <h2 style="text-align:center; margin-top:30px;">طلب خدمة التصويت في المنزل لذوي الهمم</h2>
+
+    <form class="needs-validation" novalidate style="margin-top:5%;" method="post">
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom01">العنوان الحالي</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="العنوان الحالي" name="address" required>
+                <div class="invalid-feedback">
+                    من فضلك ادخل عنوانك الحالي
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom02">رقم الموبايل</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="رقم الموبايل" name="phone" required>
+                <div class="invalid-feedback">
+                    من فضلك ادخل رقم الموبايل
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label for="validationCustomUsername">الرقم القومي</label>
+                <input type="text" class="form-control" id="validationCustomUsername" placeholder="الرقم القومي"  name="national_id" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    من فضلك ادخل الرقم القومي
+                </div>
+            </div>
+
+        </div>
+        <div class="form-row" style="margin-top:25px;">
+            <div class=" custom-file ">
+                <label class="custom-file-label" for="customFile">صورة بطاقة إثبات الإعاقة</label>
+                <input type="file" class="custom-file-input" id="customFile" required>
+                <div class="invalid-feedback">
+                    من فضلك قم بتحميل صورة بطاقة إثبات الإعاقة
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-success" onclick="myFunction1()" type="submit" style="margin-top:55px; margin-bottom:5%;" >تقديم الطلب</button>
+    </form>
+
+    <script>
+
+        function myFunction1() {
+            alert("لقد تم إرسال الطلب بنجاح.");
+        }
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+    </script>
+
+
+
+
+
+
+
+  
+
+</body>
